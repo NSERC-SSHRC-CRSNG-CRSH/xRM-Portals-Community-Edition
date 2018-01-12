@@ -287,7 +287,7 @@ namespace Adxstudio.Xrm.Notes
 							Name = note.FileAttachment.FileName,
 							Type = note.FileAttachment.MimeType,
 							Size = (ulong)note.FileAttachment.FileSize,
-							Url = ""
+							Url = string.Empty
 						};
 						entity.SetAttributeValue("documentbody",
 							Convert.ToBase64String(Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(fileMetadata, Formatting.Indented))));
@@ -474,7 +474,7 @@ namespace Adxstudio.Xrm.Notes
 							Name = note.FileAttachment.FileName,
 							Type = note.FileAttachment.MimeType,
 							Size = (ulong)note.FileAttachment.FileSize,
-							Url = ""
+							Url = string.Empty
 						};
 						entity.SetAttributeValue("documentbody",
 							Convert.ToBase64String(Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(fileMetadata, Formatting.Indented))));
@@ -1162,7 +1162,7 @@ namespace Adxstudio.Xrm.Notes
 
 			if (matchers.Any())
 			{
-				return new Regex(string.Format("^{0}$", String.Join("|", matchers)));
+				return new Regex(string.Format("^{0}$", string.Join("|", matchers)));
 			}
 
 			throw new Exception("Invalid file types in IAnnotationSettings.AcceptMimeTypes");

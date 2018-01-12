@@ -42,7 +42,7 @@ namespace SafeHtml
 			DebugOutputHigh = 0x10000,
 			DebugOutputMedium = 0x20000,
 			DebugOutputLow = 0x40000
-		};
+		}
 
 		private enum SafeHtmlCodePages
 		{
@@ -100,7 +100,7 @@ namespace SafeHtml
 			CodePageACP = 0,
 			// CodePageGetDefault = Encoding.Default.WindowsCodePage,
 			CodePageUnknown = -1,
-		};
+		}
 
 		/// <summary>
 		/// Get a safe version of a given string representing an HTML fragment.
@@ -141,7 +141,7 @@ namespace SafeHtml
 			byte* rgbTmp = null;
 
 			// Set newHtml to a blank string in case we encounter a failure
-			newHtml = String.Empty;
+			newHtml = string.Empty;
 
 			// Early exit if the existing Html is null or an empty string.
 			// The native call below doesn't return when the existing Html is an empty string.
